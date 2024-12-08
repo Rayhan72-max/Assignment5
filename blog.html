@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    clifford: '#da373d',
+                  }
+                }
+              }
+            }
+          </script> 
+          <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+          <script src="https://cdn.tailwindcss.com"></script>         
+        <title>Document</title>
+    </head>
+<body>
+    <div id="sticky"  class="sticky top-0 z-10 ">
+        <div id="cards" class="navbar py-6 bg-orange-50">
+          <div class="navbar-start">
+              <a href="index.html" class="btn btn-primary font-bold">Home</a> 
+          </div>
+          <div class="navbar-center  hidden lg:flex">
+            <h1 class="font-bold flex gap-2 items-center"><img src="./images/logo.png" alt="">Donate Bangladesh</h1>
+          </div>
+          <div class="navbar-end">
+            <h1 class="flex items-center gap-2"><img src="./images/coin.png" alt=""><span id="total_donation">98600</span>BDT</h1>
+          </div>
+      </div>
+      </div>
+      <div class="px-8">
+        <!-- Modal start -->
+         <h1 class="font-bold text-3xl">Important FAQ</h1>
+        <div class="collapse collapse-arrow bg-base-200 mt-4">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is the document object model(DOM)</div>
+            <div class="collapse-content">
+              <p>The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM</div>
+            <div class="collapse-content">
+              <p>Using query selector in JavaScript, you can select an element from the DOM (Document Object Model) by its ID, class, tag name, attributes, or a combination of these. const elements = document. querySelectorAll('. test');
+            </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of DOM</div>
+            <div class="collapse-content">
+              <p>Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for element&apos;s that exist now or in the future.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you manipulate an elements attributes and styles using DOM</div>
+            <div class="collapse-content">
+              <p>The classList object only provide methods to change the class of an element. If you want to change other attributes like id , href , or src , you can use the setAttribute() method. The setAttribute() method accepts two arguments: The name of the attribute to set.</p>
+            </div>
+          </div>
+        <!-- Modal end-->
+      </div>
+
+</body>
+</html>

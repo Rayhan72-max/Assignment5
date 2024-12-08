@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script> 
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.tailwindcss.com"></script>         
+    <title>Document</title>
+</head>
+<body onscroll="sticky()" class="p-x-2">
+  
+    <div id="sticky"  class="sticky top-0 z-10 ">
+      <div id="cards" class="navbar py-6 bg-orange-50">
+        <div class="navbar-start">
+            <a href="blog.html" class="btn btn-primary font-bold">Blog</a> 
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <h1 class="font-bold flex gap-2 items-center"><img src="./images/logo.png" alt="">Donate Bangladesh</h1>
+        </div>
+        <div class="navbar-end">
+          <h1 class="flex items-center font-bold gap-2"><img src="./images/coin.png" alt=""><span id="total_donation">98600</span>BDT</h1>
+        </div>
+    </div>
+    <div class="flex justify-center gap-4 mt-2 p-2">
+        
+        <a onclick="donation()" id="d_btn" class="btn btn-primary">Donation</a>
+        <button onclick="history()" id="h_btn" class="btn" >History</button>
+    </div>
+    </div>
+<!-- Modal -->
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box text-center">
+    <h3 class="text-center text-lg font-bold">Congrats!</h3>
+    <h1 class="flex justify-center mt-2"><img src="./images/coin.png" alt=""></h1>
+    <p class="py-4">You Have Donated For HumanKind</p>
+    <h3 class="text-lg font-bold">Succesfully</h3>
+    <div>
+      <form>
+        <div class="flex justify-center"><button type="submit" id="cls_btn" class="btn">Close Confirmation</button></div>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+
+<!-- History -->
+    <div id="history" class="p-2 mt-2 hidden  lg:px-12 mt-4">        
+    </div>
+    
+    <div id="donation" class="p-2 mt-2 lg:px-12 mt-4">
+      <div class="hero bg-base-200 border shadow-lg rounded-lg">
+        <div class="hero-content flex-col lg:flex-row">
+          <img class="h-full"
+            src="./images/noakhali.png"
+            class="max-w-sm rounded-lg shadow-2xl" />
+          <div class="h-full">
+            <h1 class="flex items-center bg-slate-300 py-px rounded w-max px-2 gap-2"><img src="./images/coin.png" alt=""><span id="deposit">0</span>BDT</h1>
+            <h1 class="text-3xl font-bold">Donate Flood at Noakhali Bangladesh</h1>
+            <p class="py-6">
+                Floods devastated much of Chattogram and Sylhet divisions in Bangladesh last month following a sudden surge of water from the upstream in India, coupled with 
+                heavy rainfall. Although floodwater has receded in most areas, more than half of Noakhali remains under water.Kofil and other locals, along with officials and experts, have blamed the clogging of canals by encroachers for the prolonged floods in the district, which one of the elderly residents called unprecedented in living memory.
+            </p>
+            <form id="form" class="mb-2">
+            <input type="number" placeholder="Write Donation Amount" id="money" class="p-4 w-full shadow-lg mb-2">
+            <button id="donate" type="submit" class="btn btn-primary w-full">Donate Now</button>
+              <div id="modal">
+                
+                
+                <!-- 
+ -->                
+              </div>
+          </form>
+            
+          </div>
+        </div>
+      </div>
+    <div class="hero bg-base-200 border shadow-lg rounded-lg">
+        <div class="hero-content flex-col lg:flex-row">
+          <img class="h-full"
+            src="./images/feni.png"
+            class="max-w-sm rounded-lg shadow-2xl" />
+          <div class="h-full">
+            <h1 class="flex items-center bg-slate-300 py-px rounded w-max px-2 gap-2"><img src="./images/coin.png" alt=""><span id="feni_deposit">0</span> BDT</h1>
+            <h1 class="text-3xl font-bold">Donate Flood at Feni,Bangladesh</h1>
+            <p class="py-6">
+                Since 22 August 2024, heavy rainfall, combined with upstream water inflows, has caused severe flooding in several districts of Bangladesh. A low-pressure system over the Bay of Bengal intensified the downpours, affecting the northeastern and southeastern regions of the country, as well as neighboring Indian states like Meghalaya and Tripura. According to reports from the Bangladesh Meteorological Department (BMD) and the Flood Forecasting and Warning Centre (FFWC),
+                some areas experienced over 180 mm of rainfall in three days.
+            </p>
+            <form class="mb-2">
+                <input type="number" placeholder="Write Donation Amount" id="feni_money" class="p-4 w-full shadow-lg mb-2">
+                <button id="feni" type="submit" class="btn btn-primary w-full">Donate Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    <div class="hero bg-base-200 border shadow-lg rounded-lg">
+        <div class="hero-content flex-col lg:flex-row">
+          <img class="h-full"
+            src="./images/quota-protest.png"
+            class="max-w-sm rounded-lg shadow-2xl" />
+          <div class="h-full">
+            <h1 class="flex items-center bg-slate-300 py-px rounded w-max px-2 gap-2"><img src="./images/coin.png" alt=""><span id="quota_deposit">0</span> BDT</h1>
+            <h1 class="text-3xl font-bold">Aid for Injured in the Movement</h1>
+            <p class="py-6">
+                On 15 July 2024, students of Dhaka University were sitting with placards and flags in a peaceful protest calling for reforms on the quota allocation for government jobs in Bangladesh.  Suddenly, they were attacked by individuals armed with rods, sticks and clubs with a few even brandishing revolvers. Within hours, a pattern emerged across the country with similar attacks coordinated by people believed to be members of the Bangladesh Chatra League (BCL), a group affiliated with the 
+                ruling Awami League (AL), against student protesters.
+            </p>
+            <form  class="mb-2">
+                <input type="number" name="" placeholder="Write Donation Amount" id="quota_money" class="p-4 w-full shadow-lg mb-2">
+                <button id="quotas" class="btn btn-primary w-full">Donate Now</button>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+<script src="script.js"></script>
+</body>
+</html>
